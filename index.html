@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Toko Buah</title>
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		<a href="index.html" class="navbar-brand">Pasar</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse">
+			<ul class="navbar-nav">
+				<li class="nav-item">
+					<a class="nav-link" href="index.html">Home</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="home.html">Daftar Buah</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="tentang.html">Tentang Kami</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	<div class="jumbotron">
+		<h1 class="display-4">Pasar Buah</h1>
+		<p class="lead">Selamat datang di pasar buah, anda belanja kami kaya</p>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-4">
+				<div class="card" style="width: 18rem;">
+					<img src="gambar/apel.jpg" class="card-img-top" alt="...">
+					<div class="card-body">
+						<h5 class="card-title">Apel Pegunungan</h5>
+						<p class="card-text">Buah Apel dari pegunungan segar yang segar</p>
+						<h4>Jumlah Pembelian : <span class="badge badge-success">90</span></h4>
+
+						<button class="btn btn-default btn-sm" style="float: right;" id="open">
+							Read More...
+						</button>
+						<button style="float: right;" id="closed" class="btn btn-default btn-sm" hidden>
+							Unread
+						</button>
+						<br/>
+						<p id="read" hidden>baaaaa..</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-4">
+				<div class="card" style="width: 18rem;">
+					<img src="gambar/jeruk.jpg" class="card-img-top" alt="...">
+					<div class="card-body">
+						<h5 class="card-title">Jeruk Kebun</h5>
+						<p class="card-text">Buah Jeruk dari Kebun pak bambang</p>
+						<h4>Jumlah Pembelian : <span class="badge badge-success">190</span></h4>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-4">
+				<div class="card" style="width: 18rem;">
+					<img src="gambar/anggur.jpeg" class="card-img-top" alt="ini adalah gambar anggur">
+					<div class="card-body">
+						<h5 class="card-title">Anggur Merah</h5>
+						<p class="card-text">Buah Anggur segar, sehat dan alami</p>
+						<h4>Jumlah Pembelian : <span class="badge badge-success">120</span></h4>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer style="background-color: blue; color: white;">
+		<div class="footer-copyright text-center py-3">Powered by<a href="#" style="color: white;"> Mr.Suru</a> | 2019
+		</div>
+	</footer>
+	<script src="js/jquery.min.js"></script>
+	<script>
+		$('#open').click(function() {
+			$('#read').prop('hidden', false);
+			$('#closed').prop('hidden', false);
+			$('#open').prop('hidden', true);
+		})
+		$('#closed').click(function() {
+			$('#read').prop('hidden', true);
+			$('#closed').prop('hidden', true);
+			$('#open').prop('hidden', false);
+		})
+	</script>
+</body>
+</html>

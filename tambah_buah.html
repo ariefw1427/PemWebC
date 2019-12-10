@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tambah Buah</title>
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		<a href="index.html" class="navbar-brand">Pasar</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse">
+			<ul class="navbar-nav">
+				<li class="nav-item">
+					<a class="nav-link" href="index.html">Home</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="home.html">Daftar Buah</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="tentang.html">Tentang Kami</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	<div class="jumbotron">
+		<h1 class="display-4">Pasar Buah</h1>
+		<p class="lead">Selamat datang di pasar buah, anda belanja kami kaya</p>
+	</div>
+	<h3 style="text-align: center;">Tambah Buah</h3>
+	<form method="POST" action="proses_tambah.php" enctype="multipart/form-data">
+		<div class="row">
+			<div class="col-sm-8">
+				<div class="row">
+					<div class="col-sm-2">
+						<label>Nama Buah</label>
+					</div>
+					<div class="col-sm-6">
+						<input type="text" name="nama_buah" class="form-control">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-8">
+				<div class="row">
+					<div class="col-sm-2">
+						<label>Jenis Buah</label>
+					</div>
+					<div class="col-sm-6">
+						<input type="text" name="jenis_buah" class="form-control">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-8">
+				<div class="row">
+					<div class="col-sm-2">
+						<label>Stok Buah</label>
+					</div>
+					<div class="col-sm-6">
+						<input type="text" name="stok_buah" class="form-control">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-8">
+				<div class="row">
+					<div class="col-sm-2">
+						<label>Harga Buah</label>
+					</div>
+					<div class="col-sm-6">
+						<input type="text" name="harga_buah" class="form-control">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-8">
+				<div class="row">
+					<div class="col-sm-2">
+						<label>Gambar</label>
+					</div>
+					<div class="col-sm-6">
+						<input type="file" name="foto" class="form-control">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-2"></div>
+			<div class="col-sm-3">
+				<button type="submit" class="btn btn-success btn-block">
+					Tambah Buah
+				</button>
+			</div>
+		</div>
+	</form>
+	<script>
+		$(document).ready(function() {
+			$('#tampil').click(function() {
+				$('#nama_buah').prop('hidden', false);
+			})
+		})
+	</script>
+</body>
+</html>
